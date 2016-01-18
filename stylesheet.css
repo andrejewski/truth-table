@@ -1,6 +1,10 @@
 
 * {box-sizing: border-box;}
 
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 body {
 	margin: 0px;
 	background-color: #fafafa;
@@ -8,9 +12,7 @@ body {
 
 label {
 	display: block;
-	padding: 10px;
 	background-color: #fff;
-	border-bottom: 1px solid #ddd;
 }
 
 label span {
@@ -24,12 +26,12 @@ label span {
 input {
 	display: block;
 	width: 100%;
-	border: 1px solid #ccc;
-	border-top-color: #aaa;
+  border: none;
+	border-bottom: 1px solid #ccc;
 	outline: none;
-	padding: 5px 8px;
+  padding: 10px;
 	font-size: 15px;
-	border-radius: 2px;
+  font-family: inherit;
 }
 
 input:focus {
@@ -74,3 +76,30 @@ footer a {
 footer a:hover {
 	text-decoration: underline;
 }
+
+.document {
+  margin: 1em;
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+dd i {
+  display: inline-block;
+  background-color: #efefef;
+  padding: 5px;
+  font-family: monospace;
+  font-style: normal;
+  border-radius: 5px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.hidden {
+  display: none;
+}
+

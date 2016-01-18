@@ -1,19 +1,66 @@
 <html>
 <head>
-	<title>Conditional Analysis</title>
+	<title>Truth Table</title>
 	<link rel='stylesheet' href='stylesheet.css'/>
 </head>
 <body>
 	<div>
 		<label>
-			<span>conditional statements (semicolon separated)</span>
-			<input type='text' id='condition' placeholder='x || y && z' value='(!x || !y) || z ; !(x && y) || z'/>
+			<input type='text' id='input' placeholder='Evaluate a proposition...'/>
 		</label>
-		<table id='table'></table>
-		<footer>
-			<a href='http://chrisandrejewski.com/'>by Chris</a> - <a href='http://github.com/andrejewski/conditional'>source</a>
-		</footer>
+    <article id='guide' class='document'>
+      <h1>Truth Table</h1>
+
+      <p>
+        A <a href='https://en.wikipedia.org/wiki/Truth_table'>truth table</a> 
+        is table used to determine whether logical
+        propositions are true or false for given input values.
+      </p>
+
+      <h3>Usage</h3>
+      <p>
+        Enter a proposition above and the truth table will appear,
+        breaking down the relationships of the inputs.
+      </p>
+
+      <p>
+        Truth Table is very flexible to which inputs are valid. An atomic can
+        be a letter, word, or words seperated by spaces which will be case-sensitive.
+        Truth Table accepts many equivalent symbols for connectives.
+      </p>
+
+      <dl>
+        <dt><b>Negation</b> can be written</dt>
+        <dd><i>not</i>, <i>NOT</i>, <i>¬</i>, <i>!</i></dd>
+
+        <dt><b>Conjuction</b> can be written</dt>
+        <dd><i>and</i>, <i>AND</i>, <i>Λ</i>, <i>&</i>, <i>&&</i></dd>
+
+        <dt><b>Disjuction</b> can be written</dt>
+        <dd><i>or</i>, <i>OR</i>, <i>∨</i>, <i>+</i>, <i>||</i></dd>
+
+        <dt><b>Exclusive disjunction</b> can be written</dt>
+        <dd><i>xor</i>, <i>XOR</i>, <i>⊕</i>, <i>&lt;/&gt;</i></dd>
+
+        <dt><b>Implication</b> can be written</dt>
+        <dd><i>if</i>, <i>IF</i>, <i>-&gt;</i>, <i>=&gt;</i></dd>
+
+        <dt><b>Biconditional</b> can be written</dt>
+        <dd><i>iff</i>, <i>IFF</i>, <i>&lt;-&gt;</i>, <i>&lt;=&gt;</i></dd>
+      </dl>
+
+      <p>Connective precedence follows the order in which these connectives have been listed.</p>
+
+      <hr/>
+      <p>
+        This tool is <a href='https://github.com/andrejewski/truth-table'>open-source</a>.
+      </p>
+    </article>
+		<table id='table' class='hidden'></table>
 	</div>
-	<script src='script.js'></script>
+  <script src='/nearley.browser.js'></script>
+  <script src='/ast.js'></script>
+  <script src='/logic-grammer.js'></script>
+  <script src='/index.js'></script>
 </body>
 </html>
