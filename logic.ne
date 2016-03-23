@@ -1,5 +1,5 @@
 
-@{% var ast = window ? window.ast : require('./ast.js'); %}
+@{% var ast = typeof window !== 'undefined' ? window.ast : require('./ast.js'); %}
 
 main -> _ EXP _ {% function(d) { return d[1]; } %}
 
