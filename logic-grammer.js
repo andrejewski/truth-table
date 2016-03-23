@@ -2,7 +2,7 @@
 // http://github.com/Hardmath123/nearley
 (function () {
 function id(x) {return x[0]; }
- var ast = window ? window.ast : require('./ast.js'); var grammar = {
+ var ast = typeof window !== 'undefined' ? window.ast : require('./ast.js'); var grammar = {
     ParserRules: [
     {"name": "main", "symbols": ["_", "EXP", "_"], "postprocess": function(d) { return d[1]; }},
     {"name": "NOT", "symbols": [{"literal":"!"}]},
